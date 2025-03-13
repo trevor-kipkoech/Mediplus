@@ -1,0 +1,112 @@
+/* Footer Styling */
+.footer {
+    background-color: #f8f9fa; /* Light white background */
+    color: #0a3d62; /* Dark blue text */
+    padding: 50px 20px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    border-top: 5px solid #0a3d62; /* Blue top border */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer Sections */
+.footer-about, .footer-links, .footer-services, .footer-newsletter {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+/* Titles */
+.footer h2, .footer h3 {
+    margin-bottom: 15px;
+    color: #0a3d62;
+    font-weight: bold;
+}
+
+/* Links */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+.footer ul li a {
+    color: #0a3d62;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Newsletter */
+.footer-newsletter input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #0a3d62;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-newsletter button {
+    background-color: #0a3d62;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-newsletter button:hover {
+    background-color: #007bff;
+}
+
+/* Social Media Icons */
+.footer-social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #0a3d62;
+    font-size: 20px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #007bff;
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #0a3d62;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

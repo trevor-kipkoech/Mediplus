@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediPlus</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" >
+   <link rel="stylesheet" href="Home.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <header class="home-header">
+        <div class="logo">
+            <img src="images/logo.png " alt="Hospital Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Home.html"><ion-icon name="home-sharp"></ion-icon>Home</a></li>
+                <li><a href="About Us.html"><ion-icon name="person"></ion-icon>About</a></li>
+                <li><a href="Service.html"><ion-icon name="fitness"></ion-icon>Services</a></li> 
+                <li><a href="Contact.html"><ion-icon name="call"></ion-icon>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+       
+
+        <div class="contact-container">
+            <section class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>123 Medical Center Drive<br>Healthcare City, HC 12345</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>Main: (555) 123-4567<br>Appointments: (555) 123-4568</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Hours</h3>
+                        <p>Monday - Friday: 8:00 AM - 8:00 PM<br>Saturday: 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="department" required>
+                            <option value="">Select Department</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="appointments">Appointments</option>
+                            <option value="billing">Billing</option>
+                            <option value="emergency">Emergency</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+        </div>
+
+        <section class="map-section">
+            <h2>Find Us</h2>
+            <div id="map">
+               
+                <div class="map-placeholder">
+                    <p>Google Maps</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31916.071898897437!2d36.41166729036977!3d-0.7134720911554322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182917f5252b1a5d%3A0x45c8fec3553fce47!2sNaivasha!5e0!3m2!1sen!2ske!4v1741600889438!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <small>Please add your Google Maps API key to enable the map</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="departments">
+            <h2>Department Contacts</h2>
+            <div class="department-grid">
+                <div class="department-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Cardiology</h3>
+                    <p>Direct: (555) 123-4569</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Neurology</h3>
+                    <p>Direct: (555) 123-4570</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-bone"></i>
+                    <h3>Orthopedics</h3>
+                    <p>Direct: (555) 123-4571</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>General Medicine</h3>
+                    <p>Direct: (555) 123-4572</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <script>
+        
+        function initMap() {
+            const hospitalLocation = { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: hospitalLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: hospitalLocation,
+                map: map,
+            });
+        }
+    </script>
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <!-- About MediPlus -->
+            <div class="footer-about">
+                <h2>MediPlus Hospital</h2>
+                <p>Delivering compassionate and advanced healthcare for all.</p>
+                <p><strong>📍 Address:</strong> 123 Health St, Your City</p>
+                <p><strong>📞 Phone:</strong> +1 234 567 890</p>
+                <p><strong>✉ Email:</strong> contact@mediplus.com</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">🏠 Home</a></li>
+                    <li><a href="#">💉 Services</a></li>
+                    <li><a href="#">👩‍⚕️ Our Doctors</a></li>
+                    <li><a href="#">🛏 Appointments</a></li>
+                    <li><a href="#">📩 Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-services">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#">🩺 General Checkup</a></li>
+                    <li><a href="#">🦷 Dental Care</a></li>
+                    <li><a href="#">💖 Cardiology</a></li>
+                    <li><a href="#">🧪 Laboratory</a></li>
+                    <li><a href="#">🩹 Emergency Care</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div class="footer-newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p>Get health tips, hospital updates & offers!</p>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 MediPlus Hospital | All Rights Reserved.</p>
+        </div>
+    </footer>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>     
+    </body>
+    </html>
