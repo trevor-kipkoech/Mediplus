@@ -94,6 +94,93 @@
                         </div>
                     </div>
                 </div>
+                <div>
+                    <audio id="hospital-audio" autoplay loop>
+                        <source src="images/WhatsApp Audio 2025-03-13 at 22.57.47_18923e44.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <video autoplay loop muted playsinline id="background-video">
+                        <source src="images/WhatsApp Video 2025-03-13 at 22.35.18_5bf5d6df.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <style>
+                        #background-video {
+                            position: fixed;
+                            right: 0;
+                            bottom: 0;
+                            min-width: 100%;
+                            min-height: 100%;
+                            object-fit: cover;
+                            z-index: -1;
+                        }
+                    </style>
+                    <audio id="hospital-audio" autoplay loop>
+                        <source src="images/WhatsApp Audio 2025-03-13 at 22.57.47_18923e44.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    
+                    <button id="audio-toggle" onclick="toggleAudio()">🔊 Play Music</button>
+                    
+                    <style>
+                        #audio-toggle {
+                            background-color: #007BFF; /* Bootstrap Primary Blue */
+                            color: white;
+                            border: none;
+                            padding: 12px 20px;
+                            font-size: 16px;
+                            font-weight: bold;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            transition: background 0.3s ease;
+                        }
+                    
+                        #audio-toggle:hover {
+                            background-color: #0056b3;
+                        }
+                    
+                        #audio-toggle:active {
+                            background-color: #004494;
+                        }
+                    </style>
+                    
+                    <script>
+                        var isPlaying = true;
+                    
+                        function toggleAudio() {
+                            var audio = document.getElementById("hospital-audio");
+                            var button = document.getElementById("audio-toggle");
+                    
+                            if (isPlaying) {
+                                audio.pause();
+                                button.innerHTML = "🔇 Play Music";
+                            } else {
+                                audio.play();
+                                button.innerHTML = "🔊 Pause Music";
+                            }
+                            isPlaying = !isPlaying;
+                        }
+                    </script>
+                    
+                    
+                    
+                  <!--   <button onclick="toggleAudio()">Toggle Audio</button>
+                    
+                    <script>
+                        function toggleAudio() {
+                            var audio = document.getElementById("hospital-audio");
+                            if (audio.paused) {
+                                audio.play();
+                            } else {
+                                audio.pause();
+                            }
+                        }
+                    </script>
+                     -->
+                      
+                </body>
+                </html>
+                
             </main>
             <footer class="footer">
                 <div class="footer-container">
